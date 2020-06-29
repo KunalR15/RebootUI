@@ -1,0 +1,2 @@
+[0625/175430.493:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0625/175430.511:ERROR:settings.cc(325)] Settings version is not 1

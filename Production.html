@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sider Menu Bar CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="selectAll.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Navigation panel</h1>
+    </div>
+  </div>
+
+<div id="OuterContainer">
+
+
+  <div>
+      <input type="checkbox" id="check" checked>
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+        <div class="sidebar">
+        <header>Menu</header>
+          <ul id="Navigation">
+          <li><a href="Index.html"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+          <li><a href="Production.html" class="active"><i class="fas fa-qrcode"></i>Production</a></li>
+          <li><a href="non-Prod.html"><i class="fas fa-qrcode"></i>Non Production</a></li>
+          <li><a href="Azure-nonProd.html"><i class="fas fa-qrcode"></i>Azure Non-Prod</a></li>
+          </ul>
+        </div>
+        <section>
+            <div class="MainPannel">
+            <h4>Production Pannel</h4><br><br><br><br>
+            
+            <input type="button"  class="btn_select_all" onclick='selectAll()' value="Select All"></button>
+            <input type="button"  class="btn_select_None" onclick='UnSelectAll()' value="Select None"></button>
+            <input type="button"  class="add_servers_to_list" value="Add to Reboot List"></button>
+            <input type="button"  class="load_new_servers" onclick="AddServers()" value="Add new servers"></button>
+            <div class="server_list">
+              
+                    <table id="serverTable">                   
+                        <tr>
+                          <th>Select</th>
+                          <th>Server Name</th>
+                          <th>Server IP</th>
+                          <th>Application</th>
+                          <th>Remove Server</th>
+                        </tr>
+                        <tr>
+                          <td style="width: 5%;">
+                                <input type="checkbox" name="server" id="January" class="serverbox"  style="width: 100%;"> 
+                          </td>
+                          <td style="width: 20%;">name</td>
+                          <td style="width: 25%;">ip</td>
+                          <td style="width: 40%;">app name</td>
+                          <td style="width: 10%;">Remove</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="server" id="February" class="serverbox"  style="width: 100%;">
+                          </td>
+                          <td>name</td>
+                          <td>ip</td>
+                          <td>app name</td>
+                          <td>Remove</td>
+                        </tr>
+                      </table>
+                      <script>
+    
+                        var index, table = document.getElementById('serverTable');
+                        for(var i = 1; i < table.rows.length; i++)
+                        {
+                            table.rows[i].cells[4].onclick = function()
+                            {
+                                var c = confirm("do you want to delete this row");
+                                if(c === true)
+                                {
+                                    index = this.parentElement.rowIndex;
+                                    table.deleteRow(index);
+                                }
+                                
+                                //console.log(index);
+                            };
+                            
+                        }
+                
+                    </script>
+
+                </div>
+                
+            </div>
+        </section>
+
+  </div>
+
+
+   
+  </body>
+</html>

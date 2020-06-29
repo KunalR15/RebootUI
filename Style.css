@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+  display: table-cell;
+  position: absolute;
+  vertical-align: top;
+  margin-top: auto;
+  left: -18%;
+  width: 18%;
+  height: max-content;
+  background: #042331;
+  transition: all .5s ease;
+  vertical-align: top;
+}
+.sidebar header {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+  color:blue;
+}
+
+.active{
+
+  color:rgb(3, 3, 37);
+  background-color: green;
+
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: auto;
+  margin-top: 15px ;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: auto;
+  margin-top: 15px;
+  font-size: 35px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+
+}
+
+#check:checked ~ .MainPannel{
+  left: 0% !important;
+}
+#check:checked ~ label #btn{
+  left: 18%;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 19%;
+}
+
+
+section{
+  padding: 2%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  margin-top: 1%;
+  margin-left: 2%;
+  background-color: rgb(177, 196, 219);
+  background-position: center;
+  background-size: cover;
+  border-color: darkblue;
+  height: max-content;
+  transition: all .5s;
+}
+.MainPannel{
+margin-left: 5%;
+}
+
+ 
+.header{
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  height: 5%;
+  background-color: black;
+  color: white;
+}
+
+
+#OuterContainer {
+  display: table;
+  background-color: #030718;
+	width: 100%;
+	height: 100%;
+}
+
+.select_all{
+  height: max-content;
+  width: max-content;
+  background-color: green;
+  border: rgb(11, 73, 11);
+  border-radius: 2px;
+}
+
+.column {
+  
+  display: block;
+  float: left;
+  width: 28%;
+  padding: 10px;
+  margin: 1%;
+  padding-bottom: 18%;
+  background: linear-gradient(0deg, rgb(65, 60, 60), #f7f2f2);
+
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+.btn_select_all {
+  
+  border: none;
+  color: rgb(7, 2, 2);
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn_select_None{
+  border: none;
+  color: rgb(7, 2, 2);
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.server_list{
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.load_new_servers{
+  float: right !important;
+  border: none;
+  color: rgb(7, 2, 2);
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+}
+.add_servers_to_list{
+  float: right;
+  border: none;
+  color: rgb(7, 2, 2);
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#serverTable table, th, td{
+  margin-top: 5%;
+  padding: 1%;
+  border: 2px solid black;
+  border-collapse: collapse;
+  height: auto;
+}
+
+.serverTable{
+  margin-top: 5%;
+}
+.MainPannel h4{
+  text-align: center;
+  font-size: 26px;
+}
+
+td:last-child{
+  background-color: rgb(223, 58, 58);color: #FFF;cursor: pointer;
+  font-weight: bold; text-decoration: underline;
+}
