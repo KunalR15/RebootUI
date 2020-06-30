@@ -4,9 +4,15 @@
   <head>
     <meta charset="utf-8">
     <title>Sider Menu Bar CSS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="selectAll.js"></script>
+    <script src="LoadData.js"></script>
+    
   </head>
   <body>
     <div class="header">
@@ -39,7 +45,7 @@
             <input type="button"  class="btn_select_all" onclick='selectAll()' value="Select All"></button>
             <input type="button"  class="btn_select_None" onclick='UnSelectAll()' value="Select None"></button>
             <input type="button"  class="add_servers_to_list" value="Add to Reboot List"></button>
-            <input type="button"  class="load_new_servers" onclick="AddServers()" value="Add new servers"></button>
+            <input type="button"  class="load_new_servers" id="load_new_servers" value="Add new servers"></button>
             <div class="server_list">
               
                     <table id="serverTable">                   
@@ -93,7 +99,25 @@
                 </div>
                 
             </div>
+
+            <div class="container">
+                <div class="table-responsive">
+                 <h1>CSV File to HTML Table Using AJAX jQuery</h1>
+                 <br />
+                 <div>
+                  <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+                 </div>
+                 <br />
+                 <div id="Server_Table">
+                 </div>
+                </div>
+               </div>
+
+
+
         </section>
+
+
 
   </div>
 
